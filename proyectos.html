@@ -116,6 +116,54 @@
 		animation-name: fade;
 		animation-duration: 1.5s;
 	}
+	.carrusel-container {
+    position: absolute; /* Mantener el carrusel fijo */
+    top: 75%; /* Centrar verticalmente */
+    right: 15px; /* Mantener a la derecha */
+    width: 35%; /* Ancho máximo */
+    max-width: 90vw; /* Adaptarse a la vista (máx 90% del ancho de la ventana) */
+    transform: translateY(-30%); /* Ajustar para centrar completamente */
+    z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
+}
+
+.carrusel {
+    position: relative;
+    overflow:hidden;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    height: auto; /* Ajustar la altura automáticamente */
+}
+
+.carrusel-inner {
+    display:flex;
+    transition: transform 0.5s ease;
+}
+
+.carrusel-item {
+    min-width: 100%; /* Mantener un solo elemento visible */
+    box-sizing: border-box;
+}
+
+.carrusel img {
+    width: 100%; /* Imagen ocupa el ancho del contenedor */
+    display: block;
+    border-radius: 8px;
+    height: auto; /* Mantener proporciones */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    padding: 5%;
+}
+@media (max-width: 600px) {
+    .carrusel-container {
+        max-width: 100%; /* En pantallas pequeñas, ocupa todo el ancho */
+    }
 
 	@-webkit-keyframes fade {
 		from {
@@ -200,26 +248,86 @@
 				<div class="col-md-4">
 					<!-- Text -->
 					<section class="box">
-						<h3>¿Qué es un proyecto participativo?</h3>
-						<h4>Una actividad que va en beneficio de una comunidad; escuela, parque, grupo de vecinos,
+					    <div class="carrusel-container">
+							<div class="carrusel">
+								<div class="carrusel-inner">
+									<div class="carrusel-item active">
+										<img src="images/Imagen de WhatsApp 2024-09-02 a las 15.47.53_05f0f449.jpg">
+									</div>
+									<div class="carrusel-item">
+										<img src="images/Imagen de WhatsApp 2024-09-02 a las 15.47.53_07ae72c5.jpg">
+									</div>
+									<div class="carrusel-item">
+										<img src="images/Imagen de WhatsApp 2024-09-02 a las 15.47.53_1df6874f.jpg">
+									</div>
+									<div class="carrusel-item">
+										<img src="images/Imagen de WhatsApp 2024-09-02 a las 15.47.53_20900aab.jpg">
+									</div>
+									<div class="carrusel-item">
+										<img src="images/Imagen de WhatsApp 2024-09-02 a las 15.47.53_2d479df7.jpg">
+									</div>
+									<div class="carrusel-item">
+										<img src="images/Imagen de WhatsApp 2024-09-02 a las 15.47.53_5fed47a1.jpg">
+									</div>
+									<div class="carrusel-item">
+										<img src="images/Imagen de WhatsApp 2024-09-02 a las 15.47.53_a071992c.jpg">
+									</div>
+									<div class="carrusel-item">
+										<img src="images/Imagen de WhatsApp 2024-09-02 a las 15.47.53_bd262ad7.jpg">
+									</div>
+									<div class="carrusel-item">
+										<img src="images/Imagen de WhatsApp 2024-09-02 a las 15.47.53_d969119b.jpg">
+									</div>
+									<div class="carrusel-item">
+										<img src="images/Imagen de WhatsApp 2024-09-02 a las 15.47.53_fcd3e39e.jpg">
+									</div>
+								</div>
+								<button class="prev" onclick="cambiarSlide(-1)">&#10094;</button>
+								<button class="next" onclick="cambiarSlide(1)">&#10095;</button>
+							</div>
+						</div>
+						<script>
+							let desliza = 1;
+					mostrarSlide(desliza);
+					
+					function cambiarSlide(n) {
+						mostrarSlide(desliza += n);
+					}
+					
+					function mostrarSlide(n) {
+						const slides = document.getElementsByClassName("carrusel-item");
+						if (n >= slides.length) { desliza = 0; }
+						if (n < 0) { desliza = slides.length - 1; }
+						
+						for (let i = 0; i < slides.length; i++) {
+							slides[i].style.display = "none";  
+						}
+						
+						slides[desliza].style.display = "block";  
+					}
+					
+						</script>
+					<h3>¿Qué es un proyecto participativo?</h3>
+					<h4>Una actividad que va en beneficio de una comunidad; escuela, parque, grupo de vecinos,
 							asilo, etc.</h4>
-						<header>
-							<h3>¿Cuántos proyectos aplica un mentor/a?</h3>
-							<h4> <strong>2 proyectos participativos</strong>, el primero durante el verano junto con tu equipo y el segundo con tu
+					<header>
+						<h3>¿Cuántos proyectos aplica un mentor/a?</h3>
+						<h4> <strong>2 proyectos participativos</strong>, el primero durante el verano junto con tu equipo y el segundo con tu
 								equipo de chicos y chicas de secundaria</h4>
-						</header>
-						<header>
-							<h3>Conoce los Proyectos generados en el verano 2024, descarga sus PDF </h3>
-							<p>
-								<a class="uno" href="PDF/1. FAMA-REVIVIENDO ESPACIOS_SS_FAMA.pptx.pdf">Reviviendo
+					</header>
+					<header>
+						<h3>Conoce los Proyectos generados en el verano 2024, descarga sus PDF </h3>
+						<p>
+							<a class="uno" href="PDF/1. FAMA-REVIVIENDO ESPACIOS_SS_FAMA.pptx.pdf">Reviviendo
 									Espacios </a><strong> & </strong>
-								<a class="uno" href="PDF/2. FAMA-Racoon Styles_Clean Park.pdf">Clean Park</a>
+							<a class="uno" href="PDF/2. FAMA-Racoon Styles_Clean Park.pdf">Clean Park</a>
 							</p>
-						</header>
-						<header>
-						<h3>Tú también puedes ser un agente de cambio</h3>
-						<h4>Realmente cualquier persona que este dispuesta a organizarse puede ser un agente de cambio. <a href="PDF/Toolkit de agencia de cambio.pdf">Descarga el Manual.</a></h4>
-						</header>
+					</header>
+					<header>
+					<h3>Tú también puedes ser un agente de cambio</h3>
+					<h4>Realmente cualquier persona que este dispuesta a organizarse puede ser un agente de cambio. <a href="PDF/Toolkit de agencia de cambio.pdf">Descarga el Manual.</a></h4>
+					</header>
+					<!--Carrucel-->
 					</section>
 					<section id="main" class="container">
 						<header class="encabezado" style="background-color: #00263a; color: white; border-radius: 10px; ">
@@ -261,7 +369,7 @@
 	</section>
 	<script>
 
-		var slideIndex = 1;
+		var slideIndex = 0;
 		showSlides(slideIndex);
 		function plusSlides(n) {
 			showSlides(slideIndex += n);
