@@ -6,6 +6,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="shortcut icon" href="icon.jpg">
+		<style>
+			#countdown {
+				border: 2px solid rgb(2, 154, 255);
+				padding: 20px;
+				border-radius: 10px;
+				background-color: rgb(126, 58, 252);
+				text-align: center;
+				color: white;
+                display: flex;
+                align-items: center;
+            font-family: Arial, sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+			}
+		</style>
 	</head>
 	<body class="landing is-preload">
 		<div id="page-wrapper">
@@ -61,7 +75,34 @@
 						<section style="border-right: 1px dashed black; padding: 0 20px;">
 							<span class="icon solid major fa-bolt accent"></span>
 							<h3>Únete a Jóvenes Atiempo</h3>
-							<h4>Inicia la convocatoria para formar parte de <strong> jóvenes a tiempo 24-25</strong> tienes hasta el 30 de Septiembre </h4><li><a href="https://es.surveymonkey.com/r/jovenes_secundaria_lb_24_25" target="_blank">Inscribete aquí</a></li>
+							<h4>Inicia la convocatoria para formar parte de <strong> jóvenes a tiempo 24-25</strong>  Inscribete </h4><a href="https://es.surveymonkey.com/r/jovenes_secundaria_lb_24_25" target="_blank">aquí</a> <br><p><b>FALTAN...</b></p>
+							<div id="countdown">Cargando...</div>
+
+							<script>
+								const targetDate = new Date("2024-10-12T10:00:00").getTime();
+						
+								const countdown = setInterval(() => {
+									const now = new Date().getTime();
+									const distance = targetDate - now;
+						
+									const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+									const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+									const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+									const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+						
+									document.getElementById("countdown").innerHTML = 
+										`${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
+						
+									if (distance < 0) {
+										clearInterval(countdown);
+										document.getElementById("countdown").innerHTML = "¡Tiempo cumplido!";
+									}
+								}, 1000); // Actualiza cada segundo
+						
+								// Mostrar el primer valor inmediatamente
+								document.getElementById("countdown").innerHTML = 
+									`${Math.floor((targetDate - new Date().getTime()) / (1000 * 60 * 60 * 24))} días restantes`;
+							</script>
 						</section>
 						<section style="padding: 0 20px;">  
 							<span class="icon solid major fa-cloud accent"></span>
