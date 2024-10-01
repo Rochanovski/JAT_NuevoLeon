@@ -160,6 +160,13 @@ button {
     cursor: pointer;
     padding: 5%;
 }
+.video{
+    position: absolute;
+    top: 120%; /* Centrar verticalmente */
+    right: 15px; /* Mantener a la derecha */
+    width: 35%;
+    max-width: 90vw; /* Adaptarse a la vista (máx 90% del ancho de la ventana) */
+}
 @media (max-width: 600px) {
     .carrusel-container {
         max-width: 100%; /* En pantallas pequeñas, ocupa todo el ancho */
@@ -249,6 +256,11 @@ button {
 				<div class="col-md-4">
 					<!-- Text -->
 					<section class="box">
+					<div class="video">
+						<video width="320px" controls>
+							<source src="assets/P.P.P. 24 - 25 Mentores, Sin Sub.mp4" type="video/mp4">
+					</div>
+						</video>
 					    <div class="carrusel-container">
 							<div class="carrusel">
 								<div class="carrusel-inner">
