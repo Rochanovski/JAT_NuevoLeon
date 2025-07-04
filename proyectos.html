@@ -9,9 +9,33 @@
 	<link rel="shortcut icon" href="icon.jpg">
 </head>
 <style>
+	.encabezado {
+		background-color: #00263a;
+		color: white;
+		border-radius: 10px;
+		padding: 30px;
+		margin: 20px auto;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	}
+
+	.encabezado h2 {
+		font-size: 2rem;
+		margin-bottom: 15px;
+		border-bottom: 2px solid #00d1b2;
+		display: inline-block;
+		padding-bottom: 5px;
+	}
+
+	.encabezado p {
+		font-size: 1.1rem;
+		line-height: 1.6;
+		text-align: justifys;
+	}
+
 	.texto-centrado {
-    text-align: center;
-  }
+		text-align: center;
+	}
+
 	a.uno {
 		font-family: "Arial Black", sans-serif;
 		font-size: 20px;
@@ -105,7 +129,8 @@
 		transition: background-color 0.6s ease;
 	}
 
-	.active, .dot:hover {
+	.active,
+	.dot:hover {
 		background-color: #717171;
 	}
 
@@ -116,62 +141,75 @@
 		animation-name: fade;
 		animation-duration: 1.5s;
 	}
+
 	.carrusel-container {
-    position: absolute; /* Mantener el carrusel fijo */
-    top: 75%; /* Centrar verticalmente */
-    right: 15px; /* Mantener a la derecha */
-    width: 35%; /* Ancho máximo */
-    max-width: 90vw; /* Adaptarse a la vista (máx 90% del ancho de la ventana) */
-    transform: translateY(-30%); /* Ajustar para centrar completamente */
-    z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
-}
+		position: absolute;
+		/* Mantener el carrusel fijo */
+		top: 75%;
+		/* Centrar verticalmente */
+		right: 15px;
+		/* Mantener a la derecha */
+		width: 35%;
+		/* Ancho máximo */
+		max-width: 90vw;
+		/* Adaptarse a la vista (máx 90% del ancho de la ventana) */
+		transform: translateY(-30%);
+		/* Ajustar para centrar completamente */
+		z-index: 1000;
+		/* Asegúrate de que esté encima de otros elementos */
+	}
 
-.carrusel {
-    position: relative;
-    overflow:hidden;
-    border: 2px solid #ffffff;
-    border-radius: 5px;
-    height: auto; /* Ajustar la altura automáticamente */
-}
+	.carrusel {
+		position: relative;
+		overflow: hidden;
+		border: 2px solid #ffffff;
+		border-radius: 5px;
+		height: auto;
+		/* Ajustar la altura automáticamente */
+	}
 
-.carrusel-inner {
-    display:flex;
-    transition: transform 0.5s ease;
-}
+	.carrusel-inner {
+		display: flex;
+		transition: transform 0.5s ease;
+	}
 
-.carrusel-item {
-    min-width: 100%; /* Mantener un solo elemento visible */
-    box-sizing: border-box;
-}
+	.carrusel-item {
+		min-width: 100%;
+		/* Mantener un solo elemento visible */
+		box-sizing: border-box;
+	}
 
-.carrusel img {
-    width: 100%; /* Imagen ocupa el ancho del contenedor */
-    display: block;
-    border-radius: 8px;
-    height: auto; /* Mantener proporciones */
-}
+	.carrusel img {
+		width: 100%;
+		/* Imagen ocupa el ancho del contenedor */
+		display: block;
+		border-radius: 8px;
+		height: auto;
+		/* Mantener proporciones */
+	}
 
-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.7);
-    border: none;
-    cursor: pointer;
-    padding: 5%;
-}
-.video{
-    position: absolute;
-    top: 120%; /* Centrar verticalmente */
-    right: 15px; /* Mantener a la derecha */
-    width: 35%;
-    max-width: 90vw; /* Adaptarse a la vista (máx 90% del ancho de la ventana) */
-}
-@media (max-width: 600px) {
-    .carrusel-container {
-        max-width: 100%; /* En pantallas pequeñas, ocupa todo el ancho */
-    }
-}
+	button {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background-color: rgba(255, 255, 255, 0.7);
+		border: none;
+		cursor: pointer;
+		padding: 5%;
+	}
+
+	.video {
+		display: flex;
+		justify-content: center;
+		margin-top: 20px;
+	}
+
+	@media (max-width: 600px) {
+		.carrusel-container {
+			max-width: 100%;
+			/* En pantallas pequeñas, ocupa todo el ancho */
+		}
+	}
 
 	@-webkit-keyframes fade {
 		from {
@@ -249,83 +287,98 @@ button {
 		<!-- Main -->
 		<section id="main" class="container">
 			<header class="encabezado" style="background-color: #00263a; color: white; border-radius: 10px; ">
-				<h2 style="color: white;">¡Formando las nuevas generaciones de jóvenes corresponsables!</h2>
-				<p style="color: white;">Proyectos participativos</p>
+				<h2 style="color: white;">Proyectos participativos</h2>
+				<p style="color: white;">Los Proyectos Participativos son semillas de transformación que nacen del
+					diálogo, la empatía y el poder colectivo.
+					<br>
+					En el programa Jóvenes Atiempo, representan la oportunidad
+					de que cada joven deje su huella construyendo soluciones reales para su comunidad. Son experiencias
+					vivas donde la creatividad, el compromiso y la voz de cada participante se convierten en motores del
+					cambio.
+					<br>
+					Aquí, ser joven es una fuerza activa con la capacidad de imaginar, proponer y
+					liderar. Estos proyectos son más que actividades son declaraciones de “estamos presentes, somos
+					parte y tenemos algo que decir y hacer
+				</p>
 			</header>
-			<div class="row">
-				<div class="col-md-4">
-					<!-- Text -->
-					<section class="box">
-					<div class="video">
-						<video width="320px" controls>
-							<source src="assets/P.P.P. 24 - 25 Mentores, Sin Sub.mp4" type="video/mp4">
-					</div>
-						</video>
-					    <div class="carrusel-container">
-							<div class="carrusel">
-								<div class="carrusel-inner">
-									<div class="carrusel-item active">
-										<img src="images/Imagen de WhatsApp 2024-09-02 a las 15.47.53_05f0f449.jpg">
-									</div>
-									<div class="carrusel-item">
-										<img src="images/Imagen de WhatsApp 2024-09-02 a las 15.47.53_07ae72c5.jpg">
-									</div>
-									<div class="carrusel-item">
-										<img src="images/Imagen de WhatsApp 2024-09-02 a las 15.47.53_1df6874f.jpg">
-									</div>
-									<div class="carrusel-item">
-										<img src="images/Imagen de WhatsApp 2024-09-02 a las 15.47.53_20900aab.jpg">
-									</div>
-									<div class="carrusel-item">
-										<img src="images/Imagen de WhatsApp 2024-09-02 a las 15.47.53_2d479df7.jpg">
-									</div>
-									<div class="carrusel-item">
-										<img src="images/Imagen de WhatsApp 2024-09-02 a las 15.47.53_5fed47a1.jpg">
-									</div>
-									<div class="carrusel-item">
-										<img src="images/Imagen de WhatsApp 2024-09-02 a las 15.47.53_a071992c.jpg">
-									</div>
-									<div class="carrusel-item">
-										<img src="images/Imagen de WhatsApp 2024-09-02 a las 15.47.53_bd262ad7.jpg">
-									</div>
-									<div class="carrusel-item">
-										<img src="images/Imagen de WhatsApp 2024-09-02 a las 15.47.53_d969119b.jpg">
-									</div>
-									<div class="carrusel-item">
-										<img src="images/Imagen de WhatsApp 2024-09-02 a las 15.47.53_fcd3e39e.jpg">
-									</div>
-								</div>
-								<button class="prev" onclick="cambiarSlide(-1)">&#10094;</button>
-								<button class="next" onclick="cambiarSlide(1)">&#10095;</button>
-							</div>
+			<div class="col-6 col-12-narrower">
+				<section class="box special">
+					<h3 class="texto-centrado">Carrusel de Imágenes</h3>
+					<div class="slideshow-container">
+						<div class="mySlides fade">
+							<img src="images/pic01.jpg" style="width:100%">
 						</div>
-						<script>
-							let desliza = 1;
-					mostrarSlide(desliza);
-					
-					function cambiarSlide(n) {
-						mostrarSlide(desliza += n);
-					}
-					
-					function mostrarSlide(n) {
-						const slides = document.getElementsByClassName("carrusel-item");
-						if (n >= slides.length) { desliza = 0; }
-						if (n < 0) { desliza = slides.length - 1; }
-						
-						for (let i = 0; i < slides.length; i++) {
-							slides[i].style.display = "none";  
-						}
-						
-						slides[desliza].style.display = "block";  
-					}
-					
-						</script>
-						<section class="box special features">
+						<div class="mySlides fade">
+							<img src="images/pic02.jpg" style="width:100%">
+						</div>
+						<div class="mySlides fade">
+							<img src="images/pic03.JPG" style="width:100%">
+						</div>
+						<!-- Agrega más imágenes aquí -->
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					</div>
+					<div style="text-align:center">
+						<span class="dot" onclick="currentSlide(1)"></span>
+						<span class="dot" onclick="currentSlide(2)"></span>
+						<span class="dot" onclick="currentSlide(3)"></span>
+						<!-- Agrega más dots si agregas más slides -->
+					</div>
+				</section>
+			</div>
+			<div class="row">
+				<div class="col-6 col-12-narrower">
+
+					<section class="box special">
+						<span class="image featured"><img src="images/01.jpg" alt="" /></span>
+						<h3>Recuperación de espacios</h3>
+						<h4>Observa el siguiente video</h4>
+
+						<div class="video">
+							<video width="320px" controls>
+								<source src="assets/P.P.P. 24 - 25 Mentores, Sin Sub.mp4" type="video/mp4">
+							</video>
+						</div>
+
+					</section>
+
+				</div>
+				<div class="col-6 col-12-narrower">
+
+					<section class="box special">
+						<span class="image featured"><img
+								src="images/Equipo Solidaridad En Acción (Antes equipo SIMI).jpg" alt="" /></span>
+						<h3>Solidaridad en acción</h3>
+						<h4>Conoce más acerca de de su proyecto siguiendo sus página de instagram: </h4><br>
+						<ul class="actions special">
+							<li><a href="https://www.instagram.com/equipo_s.i.m.i?igsh=azNmc2Rrb2Z2d3pm"
+									class="button alt" target="_blank">Instagram</a></li>
+						</ul>
+					</section>
+				</div>
+				<div class="col-6 col-12-narrower">
+					<div class="justify-content-center mt-4" style="text-align: center;  font-weight: bold;">
+						<h5 style="font-size: 25px;">Escucha nuestra entrevista en Radio-UDEM</h5>
+					</div>
+				</div>
+				<div class="contenedor">
+					<div class="hijo">
+						<audio controls>
+							<source src="audio/HABLEMOS DE TRASCENDER 23 05 10 (1).mp3" type="audio/mpeg"
+								style="background-color: white;">
+							Your browser does not support the audio element.
+						</audio>
+
+					</div>
+				</div>
+			</div>
+			<section class="box special features">
 				<div class="features-row" style="display: flex;">
 					<section style="border-right: 1px dashed black; padding: 0 20px;">
 						<span class="icon solid major fa-bolt accent"></span>
 						<h3>Se parte del equipo de Jóvenes Atiempo</h3>
-						<h4>Estamos por arrancar nuestro Taller Formativo para formar a los mentores de la generación:
+						<h4>Estamos por arrancar nuestro Taller Formativo para formar a los mentores de la
+							generación:
 							<br>
 							<h4><strong> Jóvenes Atiempo 25 - 26</strong></h4>
 							<br>
@@ -336,66 +389,70 @@ button {
 					<section style="padding: 0 20px;">
 						<span class="icon solid major fa-cloud accent"></span>
 						<h3>Presentación de Proyectos Participativos</h3>
-						<h4>Separa la fecha y conoce las iniciativas que buscan mejorar sus comunidades y espacios en
+						<h4>Separa la fecha y conoce las iniciativas que buscan mejorar sus comunidades y
+							espacios en
 							<strong> Nuevo León</strong>, presentará sus
-							proyectos participativos en las siguientes fechas</h4>
+							proyectos participativos en las siguientes fechas
+						</h4>
 						<br>
-						
+
 
 					</section>
 				</div>
 			</section>
-					<h3>¿Qué es un proyecto participativo?</h3>
-					<h4>Una actividad que va en beneficio de una comunidad; escuela, parque, grupo de vecinos,
-							asilo, etc.</h4>
-					<header>
-						<h3>¿Cuántos proyectos aplica un mentor/a?</h3>
-						<h4> <strong>2 proyectos participativos</strong>, el primero durante el verano junto con tu equipo y el segundo con tu
-								equipo de chicos y chicas de secundaria</h4>
-					</header>
-					<header>
-						<h3>Conoce los Proyectos generados en el verano 2024, descarga sus PDF </h3>
-						<p>
-							<a class="uno" href="PDF/1. FAMA-REVIVIENDO ESPACIOS_SS_FAMA.pptx.pdf">Reviviendo
-									Espacios </a><strong> & </strong>
-							<a class="uno" href="PDF/2. FAMA-Racoon Styles_Clean Park.pdf">Clean Park</a>
-							</p>
-					</header>
-					<header>
-					<h3>Tú también puedes ser un agente de cambio</h3>
-					<h4>Realmente cualquier persona que este dispuesta a organizarse puede ser un agente de cambio. <a href="PDF/Toolkit de agencia de cambio.pdf">Descarga el Manual.</a></h4>
-					</header>
-					<!--Carrucel-->
-					</section>
-					<section id="main" class="container">
-						<header class="encabezado" style="background-color: #00263a; color: white; border-radius: 10px; ">
-							<h2 style="color: white;">¡Conoce a los equipos !</h2>
-							<p style="color: white;">Jóvenes Atiempo ⚛️ 24 - 25 </p>
-						</header>
-						</section>
-					<div class="slideshow-container">
-						<div class="mySlides fade">
-							<div class="numbertext">1 / 2</div>
-							<img src="images/Equipo Star Trees.jpg" style="width:100%">
-							<div class="text">Star Trees</div>
-						</div>
-
-						<div class="mySlides fade">
-							<div class="numbertext">2 / 2</div>
-							<img src="images/Equipo Solidaridad En Acción (Antes equipo SIMI).jpg" style="width:100%">
-						    <div class="text">Solidaridad en acción</div>
-						</div>
-
-						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-						<a class="next" onclick="plusSlides(1)">&#10095;</a>
-					</div>
-					<br>
-					<div style="text-align:center">
-						<span class="dot" onclick="currentSlide(1)"></span>
-						<span class="dot" onclick="currentSlide(2)"></span>
-					</div>
-				</div>
+			<h3>¿Qué es un proyecto participativo?</h3>
+			<h4>Una actividad que va en beneficio de una comunidad; escuela, parque, grupo de vecinos,
+				asilo, etc.</h4>
+			<header>
+				<h3>¿Cuántos proyectos aplica un mentor/a?</h3>
+				<h4> <strong>2 proyectos participativos</strong>, el primero durante el verano junto con tu
+					equipo y el segundo con tu
+					equipo de chicos y chicas de secundaria</h4>
+			</header>
+			<header>
+				<h3>Conoce los Proyectos generados en el verano 2024, descarga sus PDF </h3>
+				<p>
+					<a class="uno" href="PDF/1. FAMA-REVIVIENDO ESPACIOS_SS_FAMA.pptx.pdf">Reviviendo
+						Espacios </a><strong> & </strong>
+					<a class="uno" href="PDF/2. FAMA-Racoon Styles_Clean Park.pdf">Clean Park</a>
+				</p>
+			</header>
+			<header>
+				<h3>Tú también puedes ser un agente de cambio</h3>
+				<h4>Realmente cualquier persona que este dispuesta a organizarse puede ser un agente de
+					cambio. <a href="PDF/Toolkit de agencia de cambio.pdf">Descarga el Manual.</a></h4>
+			</header>
+			<!--Carrucel-->
 		</section>
+		<section id="main" class="container">
+			<header class="encabezado" style="background-color: #00263a; color: white; border-radius: 10px; ">
+				<h2 style="color: white;">¡Conoce a los equipos !</h2>
+				<p style="color: white;">Jóvenes Atiempo ⚛️ 24 - 25 </p>
+			</header>
+		</section>
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<div class="numbertext">1 / 2</div>
+				<img src="images/Equipo Star Trees.jpg" style="width:100%">
+				<div class="text">Star Trees</div>
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">2 / 2</div>
+				<img src="images/Equipo Solidaridad En Acción (Antes equipo SIMI).jpg" style="width:100%">
+				<div class="text">Solidaridad en acción</div>
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+		</div>
+	</div>
+	</section>
 	</div>
 	<section id="uno"></section>
 	<section id="dos"></section>
@@ -406,31 +463,33 @@ button {
 		</p>
 	</section>
 	<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
 
-		var slideIndex = 0;
-		showSlides(slideIndex);
-		function plusSlides(n) {
-			showSlides(slideIndex += n);
-		}
-		function currentSlide(n) {
-			showSlides(slideIndex = n);
-		}
-		function showSlides(n) {
-			var i;
-			var slides = document.getElementsByClassName("mySlides");
-			var dots = document.getElementsByClassName("dot");
-			if (n > slides.length) { slideIndex = 1 }
-			if (n < 1) { slideIndex = slides.length }
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
-			}
-			for (i = 0; i < dots.length; i++) {
-				dots[i].className = dots[i].className.replace(" active", "");
-			}
-			slides[slideIndex - 1].style.display = "block";
-			dots[slideIndex - 1].className += " active";
-		}
-	</script>
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+</script>
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.dropotron.min.js"></script>
