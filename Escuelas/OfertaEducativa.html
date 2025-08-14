@@ -1,0 +1,361 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jovenes A Tiempo</title>
+  <!-- Enlace al archivo de estilos -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@1&display=swap" rel="stylesheet">
+  <!-- Íconos -->
+  <script src="https://unpkg.com/phosphor-icons"></script>
+</head>
+
+<body>
+  <!-- Barra lateral con filtros -->
+  <div class="sidebar">
+    <span><span>Jovenes A Tiempo</span><br>
+      <p></p>
+    </span>
+
+    <!-- Filtro santa catarina -->
+    <div class="button-set">
+      <div class="filter-title">Santa Catarina</div>
+      <div class="button-group" data-filter-group="santa">
+        <button class="button is-checked" data-filter="">Todo</button>
+        <button class="button" data-filter=".preparatoriassc">Preparatorias</button>
+        <button class="button" data-filter=".universidadessc">Universidades</button>
+      </div>
+    </div>
+
+    <!-- Filtro garcia -->
+    <div class="button-set">
+      <div class="filter-title">Garcia</div>
+      <div class="button-group" data-filter-group="garcia">
+        <button class="button is-checked" data-filter="">Todo</button>
+        <button class="button" data-filter=".preparatoriasg">Preparatorias</button>
+        <button class="button" data-filter=".universidadesg">Universidades</button>
+      </div>
+    </div>
+
+    <!-- Filtro apodaca -->
+    <div class="button-set">
+      <div class="filter-title">Apodaca</div>
+      <div class="button-group" data-filter-group="apodaca">
+        <button class="button is-checked" data-filter="">Todo</button>
+        <button class="button" data-filter=".preparatoriasap">Preparatorias</button>
+        <button class="button" data-filter=".universidadesap">Universidades</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenedor principal de imagenes -->
+  <div class="grid">
+    <!-- Aqui empiezan -->
+    <div class="character-box preparatoriassc">
+      <div class="hover-container">
+        <div class="char-img"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUtss26jCI5I0dKZEJ74TSy5zRebbao4syg&s);">
+        </div>
+        <div class="char-hover">
+          <div class="char-info">
+            <div class="char-name">Preparatoria Santa Catarina</div>
+          </div>
+          <div class="char-blurb">Breve descripción</div>
+          <div class="char-links">
+            <a href="#">enlace 1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="character-box preparatoriasg">
+      <div class="hover-container">
+        <div class="char-img"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREK9oYLUYSqMtw46ZPgUrvxIQaNPKccZZzeQ&s);">
+        </div>
+        <div class="char-hover">
+          <div class="char-info">
+            <div class="char-name">Preparatoria Garcia</div>
+          </div>
+          <div class="char-blurb">Breve descripción</div>
+          <div class="char-links">
+            <a href="#">enlace 1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="character-box preparatoriasap">
+      <div class="hover-container">
+        <div class="char-img"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6n_HzVDLPQcXEGX045aXGEXtrJ21VFddO8w&s);">
+        </div>
+        <div class="char-hover">
+          <div class="char-info">
+            <div class="char-name">Preparatoria Apodaca</div>
+          </div>
+          <div class="char-blurb">Breve descripción</div>
+          <div class="char-links">
+            <a href="#">enlace 1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="character-box universidadessc">
+      <div class="hover-container">
+        <div class="char-img"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUtss26jCI5I0dKZEJ74TSy5zRebbao4syg&s);">
+        </div>
+        <div class="char-hover">
+          <div class="char-info">
+            <div class="char-name">Universidad Santa Catarina</div>
+          </div>
+          <div class="char-blurb">Breve descripción</div>
+          <div class="char-links">
+            <a href="#">enlace 1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="character-box preparatoriassc">
+      <div class="hover-container">
+        <div class="char-img"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUtss26jCI5I0dKZEJ74TSy5zRebbao4syg&s);">
+        </div>
+        <div class="char-hover">
+          <div class="char-info">
+            <div class="char-name">Preparatoria Santa Catarina</div>
+          </div>
+          <div class="char-blurb">Breve descripción</div>
+          <div class="char-links">
+            <a href="#">enlace 1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="character-box preparatoriassc">
+      <div class="hover-container">
+        <div class="char-img"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUtss26jCI5I0dKZEJ74TSy5zRebbao4syg&s);">
+        </div>
+        <div class="char-hover">
+          <div class="char-info">
+            <div class="char-name">Preparatoria Santa Catarina</div>
+          </div>
+          <div class="char-blurb">Breve descripción</div>
+          <div class="char-links">
+            <a href="#">enlace 1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="character-box universidadessc">
+      <div class="hover-container">
+        <div class="char-img"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUtss26jCI5I0dKZEJ74TSy5zRebbao4syg&s);">
+        </div>
+        <div class="char-hover">
+          <div class="char-info">
+            <div class="char-name">Universidad Santa Catarina</div>
+          </div>
+          <div class="char-blurb">Breve descripción</div>
+          <div class="char-links">
+            <a href="#">enlace 1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="character-box universidadessc">
+      <div class="hover-container">
+        <div class="char-img"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUtss26jCI5I0dKZEJ74TSy5zRebbao4syg&s);">
+        </div>
+        <div class="char-hover">
+          <div class="char-info">
+            <div class="char-name">Universidad Santa Catarina</div>
+          </div>
+          <div class="char-blurb">Breve descripción</div>
+          <div class="char-links">
+            <a href="#">enlace 1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="character-box preparatoriasap">
+      <div class="hover-container">
+        <div class="char-img"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUtss26jCI5I0dKZEJ74TSy5zRebbao4syg&s);">
+        </div>
+        <div class="char-hover">
+          <div class="char-info">
+            <div class="char-name">Preparatoria Apodaca</div>
+          </div>
+          <div class="char-blurb">Breve descripción</div>
+          <div class="char-links">
+            <a href="#">enlace 1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="character-box preparatoriasap">
+      <div class="hover-container">
+        <div class="char-img"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUtss26jCI5I0dKZEJ74TSy5zRebbao4syg&s);">
+        </div>
+        <div class="char-hover">
+          <div class="char-info">
+            <div class="char-name">Preparatoria Apodaca</div>
+          </div>
+          <div class="char-blurb">Breve descripción</div>
+          <div class="char-links">
+            <a href="#">enlace 1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="character-box universidadesap">
+      <div class="hover-container">
+        <div class="char-img"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUtss26jCI5I0dKZEJ74TSy5zRebbao4syg&s);">
+        </div>
+        <div class="char-hover">
+          <div class="char-info">
+            <div class="char-name">Universidad Apodaca</div>
+          </div>
+          <div class="char-blurb">Breve descripción</div>
+          <div class="char-links">
+            <a href="#">enlace 1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="character-box universidadesap">
+      <div class="hover-container">
+        <div class="char-img"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUtss26jCI5I0dKZEJ74TSy5zRebbao4syg&s);">
+        </div>
+        <div class="char-hover">
+          <div class="char-info">
+            <div class="char-name">Universidad Apodaca</div>
+          </div>
+          <div class="char-blurb">Breve descripción</div>
+          <div class="char-links">
+            <a href="#">enlace 1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="character-box universidadesap">
+      <div class="hover-container">
+        <div class="char-img"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUtss26jCI5I0dKZEJ74TSy5zRebbao4syg&s);">
+        </div>
+        <div class="char-hover">
+          <div class="char-info">
+            <div class="char-name">Universidad Apodaca</div>
+          </div>
+          <div class="char-blurb">Breve descripción</div>
+          <div class="char-links">
+            <a href="#">enlace 1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="character-box preparatoriasg">
+      <div class="hover-container">
+        <div class="char-img"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUtss26jCI5I0dKZEJ74TSy5zRebbao4syg&s);">
+        </div>
+        <div class="char-hover">
+          <div class="char-info">
+            <div class="char-name">Preparatoria Garcia</div>
+          </div>
+          <div class="char-blurb">Breve descripción</div>
+          <div class="char-links">
+            <a href="#">enlace 1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="character-box preparatoriasg">
+      <div class="hover-container">
+        <div class="char-img"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUtss26jCI5I0dKZEJ74TSy5zRebbao4syg&s);">
+        </div>
+        <div class="char-hover">
+          <div class="char-info">
+            <div class="char-name">Preparatoria Garcia</div>
+          </div>
+          <div class="char-blurb">Breve descripción</div>
+          <div class="char-links">
+            <a href="#">enlace 1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="character-box universidadesg">
+      <div class="hover-container">
+        <div class="char-img"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUtss26jCI5I0dKZEJ74TSy5zRebbao4syg&s);">
+        </div>
+        <div class="char-hover">
+          <div class="char-info">
+            <div class="char-name"> Universidad Garcia</div>
+          </div>
+          <div class="char-blurb">Breve descripción</div>
+          <div class="char-links">
+            <a href="#">enlace 1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="character-box universidadesg">
+      <div class="hover-container">
+        <div class="char-img"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUtss26jCI5I0dKZEJ74TSy5zRebbao4syg&s);">
+        </div>
+        <div class="char-hover">
+          <div class="char-info">
+            <div class="char-name"> Universidad Garcia</div>
+          </div>
+          <div class="char-blurb">Breve descripción</div>
+          <div class="char-links">
+            <a href="#">enlace 1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="character-box universidadesg">
+      <div class="hover-container">
+        <div class="char-img"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUtss26jCI5I0dKZEJ74TSy5zRebbao4syg&s);">
+        </div>
+        <div class="char-hover">
+          <div class="char-info">
+            <div class="char-name"> Universidad Garcia</div>
+          </div>
+          <div class="char-blurb">Breve descripción</div>
+          <div class="char-links">
+            <a href="#">enlace 1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.5/isotope.pkgd.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
