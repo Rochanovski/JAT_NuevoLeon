@@ -9,495 +9,186 @@
 	<link rel="shortcut icon" href="icon.jpg">
 </head>
 <style>
-	.encabezado {
-		background-color: #00263a;
-		color: white;
-		border-radius: 10px;
-		padding: 30px;
-		margin: 20px auto;
-		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-	}
-
-	.encabezado h2 {
-		font-size: 2rem;
-		margin-bottom: 15px;
-		border-bottom: 2px solid #00d1b2;
-		display: inline-block;
-		padding-bottom: 5px;
-	}
-
-	.encabezado p {
-		font-size: 1.1rem;
-		line-height: 1.6;
-		text-align: justifys;
-	}
-
-	.texto-centrado {
-		text-align: center;
-	}
-
-	a.uno {
-		font-family: "Arial Black", sans-serif;
-		font-size: 20px;
-		color: #75297f;
-		margin-bottom: 10px;
-		text-decoration: none;
-	}
-
-	a.uno:hover {
-		text-decoration: underline;
-	}
-
-	* {
-		box-sizing: border-box
-	}
-
-	.mySlides {
-		display: none
-	}
-
-	img {
-		vertical-align: middle;
-	}
-
-	/* Slideshow container */
-	.slideshow-container {
-		max-width: 50%;
-		position: relative;
-		margin: auto;
-	}
-
-	/* Next & previous buttons */
-	.prev,
-	.next {
-		cursor: pointer;
-		position: absolute;
-		top: 50%;
-		width: auto;
-		padding: 16px;
-		margin-top: -22px;
-		color: rgb(194, 231, 255);
-		font-weight: bold;
-		font-size: 18px;
-		transition: 0.6s ease;
-		border-radius: 0 3px 3px 0;
-		user-select: none;
-	}
-
-	/* Position the "next button" to the right */
-	.next {
-		right: 0;
-		border-radius: 3px 0 0 3px;
-	}
-
-	/* On hover, add a black background color with a little bit see-through */
-	.prev:hover,
-	.next:hover {
-		background-color: rgba(0, 0, 0, 0.8);
-	}
-
-	/* Caption text */
-	.text {
-		color: hsl(0, 0%, 0%);
-		font-size: 30px;
-		padding: 8px 12px;
-		position: absolute;
-		bottom: 8px;
-		width: 100%;
-		text-align: center;
-		font-weight: bold;
-	}
-
-	/* Number text (1/3 etc) */
-	.numbertext {
-		color: #000000;
-		font-size: 12px;
-		padding: 8px 12px;
-		position: absolute;
-		top: 0;
-	}
-
-	/* The dots/bullets/indicators */
-	.dot {
-		cursor: pointer;
-		height: 15px;
-		width: 15px;
-		margin: 0 2px;
-		background-color: #595cfc;
-		border-radius: 50%;
-		display: inline-block;
-		transition: background-color 0.6s ease;
-	}
-
-	.active,
-	.dot:hover {
-		background-color: #717171;
-	}
-
-	/* Fading animation */
-	.fade {
-		-webkit-animation-name: fade;
-		-webkit-animation-duration: 1.5s;
-		animation-name: fade;
-		animation-duration: 1.5s;
-	}
-
-	.carrusel-container {
-		position: absolute;
-		/* Mantener el carrusel fijo */
-		top: 75%;
-		/* Centrar verticalmente */
-		right: 15px;
-		/* Mantener a la derecha */
-		width: 35%;
-		/* Ancho máximo */
-		max-width: 90vw;
-		/* Adaptarse a la vista (máx 90% del ancho de la ventana) */
-		transform: translateY(-30%);
-		/* Ajustar para centrar completamente */
-		z-index: 1000;
-		/* Asegúrate de que esté encima de otros elementos */
-	}
-
-	.carrusel {
-		position: relative;
-		overflow: hidden;
-		border: 2px solid #ffffff;
-		border-radius: 5px;
-		height: auto;
-		/* Ajustar la altura automáticamente */
-	}
-
-	.carrusel-inner {
-		display: flex;
-		transition: transform 0.5s ease;
-	}
-
-	.carrusel-item {
-		min-width: 100%;
-		/* Mantener un solo elemento visible */
-		box-sizing: border-box;
-	}
-
-	.carrusel img {
-		width: 100%;
-		/* Imagen ocupa el ancho del contenedor */
-		display: block;
-		border-radius: 8px;
-		height: auto;
-		/* Mantener proporciones */
-	}
-
-	button {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		background-color: rgba(255, 255, 255, 0.7);
-		border: none;
-		cursor: pointer;
-		padding: 5%;
-	}
-
-	.video {
-		display: flex;
-		justify-content: center;
-		margin-top: 20px;
-	}
-
-	@media (max-width: 600px) {
-		.carrusel-container {
-			max-width: 100%;
-			/* En pantallas pequeñas, ocupa todo el ancho */
-		}
-	}
-
-	@-webkit-keyframes fade {
-		from {
-			opacity: .4
-		}
-
-		to {
-			opacity: 1
-		}
-	}
-
-	@keyframes fade {
-		from {
-			opacity: .4
-		}
-
-		to {
-			opacity: 1
-		}
-	}
-
-	/* On smaller screens, decrease text size */
-	@media only screen and (max-width: 300px) {
-
-		.prev,
-		.next,
-		.text {
-			font-size: 11px
-		}
-
-		.dot {
-			height: 10px;
-			width: 10px;
-		}
-	}
-
-	@media only screen and (max-width: 500px) {
-
-		.prev,
-		.next,
-		.text {
-			font-size: 14px
-		}
-	}
+	.bg-azul {
+  background-color: #00263a;
+  border-radius: 10px;
+  padding: 20px;
+}
+.texto-blanco {
+  color: white;
+}
+.centrado {
+  text-align: center;
+}
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+.slide {
+  display: none;
+}
+.slide.active {
+  display: block;
+}
+.slide img {
+  width: 100%;
+  height: auto;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #00000088;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+.boton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00263a;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
 </style>
 
 <body class="is-preload">
 	<div id="page-wrapper">
 
 		<!-- Header -->
-		<header id="header" class="alt" style="background: #00263a;">
-			<h1><a href="index.html">Jóvenes Atiempo</a> - FAMA</h1>
-			<nav id="nav">
-				<ul>
-					<li><a href="index.html">Inicio</a></li>
-					<li>
-						<a href="#" class="icon solid fa-angle-down">Menú</a>
+
+		<body class="is-preload">
+			<div id="page-wrapper">
+
+				<!-- Header -->
+				<header id="header" class="alt" style="background: #00263a;">
+					<h1><a href="index.html">Jóvenes Atiempo</a> - FAMA</h1>
+					<nav id="nav">
 						<ul>
-							<li><a href="nosotros.html">Nosotros</a></li>
+							<li><a href="index.html">Inicio</a></li>
 							<li>
-								<a href="#">Redes</a>
+								<a href="#" class="icon solid fa-angle-down">Menú</a>
 								<ul>
-									<li><a href="https://www.facebook.com/jovenesatiempo">Facebook</a></li>
-									<li><a href="https://www.instagram.com/jovenes_atiempo/">Instagram</a></li>
+									<li><a href="nosotros.html">Nosotros</a></li>
+									<li>
+										<a href="#">Redes</a>
+										<ul>
+											<li><a href="https://www.facebook.com/jovenesatiempo">Facebook</a></li>
+											<li><a href="https://www.instagram.com/jovenes_atiempo/">Instagram</a></li>
+										</ul>
+									</li>
 								</ul>
 							</li>
+							<li><a href="https://www.stockcrowd.com/template/payment/dp/6287?fullScreen=1"
+									class="button">Donaciones</a></li>
 						</ul>
-					</li>
-					<li><a href="https://www.stockcrowd.com/template/payment/dp/6287?fullScreen=1"
-							class="button">Donaciones</a></li>
-				</ul>
-			</nav>
-		</header>
+					</nav>
+				</header>
 
-		<!-- Main -->
-		<section id="main" class="container">
-			<header class="encabezado" style="background-color: #00263a; color: white; border-radius: 10px; ">
-				<h2 style="color: white;">Proyectos participativos</h2>
-				<p style="color: white;">Los Proyectos Participativos son semillas de transformación que nacen del
-					diálogo, la empatía y el poder colectivo.
-					<br>
-					En el programa Jóvenes Atiempo, representan la oportunidad
-					de que cada joven deje su huella construyendo soluciones reales para su comunidad. Son experiencias
-					vivas donde la creatividad, el compromiso y la voz de cada participante se convierten en motores del
-					cambio.
-					<br>
-					Aquí, ser joven es una fuerza activa con la capacidad de imaginar, proponer y
-					liderar. Estos proyectos son más que actividades son declaraciones de “estamos presentes, somos
-					parte y tenemos algo que decir y hacer
-				</p>
-			</header>
-			<div class="col-6 col-12-narrower">
-				<section class="box special">
-					<h3 class="texto-centrado">Carrusel de Imágenes</h3>
-					<div class="slideshow-container">
-						<div class="mySlides fade">
-							<img src="images/pic01.jpg" style="width:100%">
-						</div>
-						<div class="mySlides fade">
-							<img src="images/pic02.jpg" style="width:100%">
-						</div>
-						<div class="mySlides fade">
-							<img src="images/pic03.JPG" style="width:100%">
-						</div>
-						<!-- Agrega más imágenes aquí -->
-						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-						<a class="next" onclick="plusSlides(1)">&#10095;</a>
-					</div>
-					<div style="text-align:center">
-						<span class="dot" onclick="currentSlide(1)"></span>
-						<span class="dot" onclick="currentSlide(2)"></span>
-						<span class="dot" onclick="currentSlide(3)"></span>
-						<!-- Agrega más dots si agregas más slides -->
-					</div>
-				</section>
-			</div>
-			<div class="row">
-				<div class="col-6 col-12-narrower">
+				<!-- Main -->
+				<section id="proyectos" class="container" style="margin-top: 25px;">
+					<header class="encabezado bg-azul texto-blanco">
+						<h2>Proyectos participativos</h2>
+						<p>
+							Son semillas de transformación que nacen del diálogo, la empatía y el poder colectivo.
+							En Jóvenes Atiempo, cada joven deja su huella construyendo soluciones reales para su
+							comunidad.
+							Aquí, ser joven es una fuerza activa con la capacidad de imaginar, proponer y liderar.
+						</p>
+					</header>
 
-					<section class="box special">
-						<span class="image featured"><img src="images/01.jpg" alt="" /></span>
+					<section class="carrusel">
+						<h3 class="centrado">Carrusel de Imágenes</h3>
+						<div class="carousel">
+							<div class="slide active"><img src="images/pic01.jpg" alt="Proyecto 1"></div>
+							<div class="slide"><img src="images/pic02.jpg" alt="Proyecto 2"></div>
+							<div class="slide"><img src="images/pic03.JPG" alt="Proyecto 3"></div>
+							<button class="prev" onclick="changeSlide(-1)">❮</button>
+							<button class="next" onclick="changeSlide(1)">❯</button>
+						</div>
+					</section>
+
+					<section class="proyecto">
 						<h3>Recuperación de espacios</h3>
-						<h4>Observa el siguiente video</h4>
-
-						<div class="video">
-							<video width="320px" controls>
-								<source src="assets/P.P.P. 24 - 25 Mentores, Sin Sub.mp4" type="video/mp4">
-							</video>
-						</div>
-
+						<video width="100%" controls>
+							<source src="assets/P.P.P. 24 - 25 Mentores, Sin Sub.mp4" type="video/mp4">
+						</video>
 					</section>
 
-				</div>
-				<div class="col-6 col-12-narrower">
-
-					<section class="box special">
-						<span class="image featured"><img
-								src="images/Equipo Solidaridad En Acción (Antes equipo SIMI).jpg" alt="" /></span>
+					<section class="proyecto">
 						<h3>Solidaridad en acción</h3>
-						<h4>Conoce más acerca de de su proyecto siguiendo sus página de instagram: </h4><br>
-						<ul class="actions special">
-							<li><a href="https://www.instagram.com/equipo_s.i.m.i?igsh=azNmc2Rrb2Z2d3pm"
-									class="button alt" target="_blank">Instagram</a></li>
-						</ul>
+						<p>Conoce más en su Instagram:</p>
+						<a href="https://www.instagram.com/equipo_s.i.m.i?igsh=azNmc2Rrb2Z2d3pm" class="boton"
+							target="_blank">Instagram</a>
 					</section>
-				</div>
-				<div class="col-6 col-12-narrower">
-					<div class="justify-content-center mt-4" style="text-align: center;  font-weight: bold;">
-						<h5 style="font-size: 25px;">Escucha nuestra entrevista en Radio-UDEM</h5>
-					</div>
-				</div>
-				<div class="contenedor">
-					<div class="hijo">
+
+					<section class="audio">
+						<h3>Escucha nuestra entrevista en Radio-UDEM</h3>
 						<audio controls>
-							<source src="audio/HABLEMOS DE TRASCENDER 23 05 10 (1).mp3" type="audio/mpeg"
-								style="background-color: white;">
-							Your browser does not support the audio element.
+							<source src="audio/HABLEMOS DE TRASCENDER 23 05 10 (1).mp3" type="audio/mpeg">
 						</audio>
+					</section>
 
-					</div>
-				</div>
+					<section class="info">
+						<h3>¿Qué es un proyecto participativo?</h3>
+						<p>Una actividad que beneficia a una comunidad: escuela, parque, vecinos, asilo, etc.</p>
+
+						<h3>¿Cuántos proyectos aplica un mentor/a?</h3>
+						<p>2 proyectos: uno en verano y otro con chicos/as de secundaria.</p>
+
+						<h3>Proyectos verano 2024</h3>
+						<p>
+							<a href="PDF/1. FAMA-REVIVIENDO ESPACIOS_SS_FAMA.pptx.pdf">Reviviendo Espacios</a> &
+							<a href="PDF/2. FAMA-Racoon Styles_Clean Park.pdf">Clean Park</a>
+						</p>
+
+						<h3>¿Quieres ser agente de cambio?</h3>
+						<p>
+							Cualquier persona organizada puede lograrlo.
+							<a href="PDF/Toolkit de agencia de cambio.pdf">Descarga el Manual</a>
+						</p>
+					</section>
+				</section>
+
 			</div>
-			<section class="box special features">
-				<div class="features-row" style="display: flex;">
-					<section style="border-right: 1px dashed black; padding: 0 20px;">
-						<span class="icon solid major fa-bolt accent"></span>
-						<h3>Se parte del equipo de Jóvenes Atiempo</h3>
-						<h4>Estamos por arrancar nuestro Taller Formativo para formar a los mentores de la
-							generación:
-							<br>
-							<h4><strong> Jóvenes Atiempo 25 - 26</strong></h4>
-							<br>
-							Conoce más
-						</h4><a href="https://linktr.ee/JovenesAtiempo" target="_blank">click
-							aquí</a> <br>
-					</section>
-					<section style="padding: 0 20px;">
-						<span class="icon solid major fa-cloud accent"></span>
-						<h3>Presentación de Proyectos Participativos</h3>
-						<h4>Separa la fecha y conoce las iniciativas que buscan mejorar sus comunidades y
-							espacios en
-							<strong> Nuevo León</strong>, presentará sus
-							proyectos participativos en las siguientes fechas
-						</h4>
-						<br>
-
-
-					</section>
-				</div>
-			</section>
-			<h3>¿Qué es un proyecto participativo?</h3>
-			<h4>Una actividad que va en beneficio de una comunidad; escuela, parque, grupo de vecinos,
-				asilo, etc.</h4>
-			<header>
-				<h3>¿Cuántos proyectos aplica un mentor/a?</h3>
-				<h4> <strong>2 proyectos participativos</strong>, el primero durante el verano junto con tu
-					equipo y el segundo con tu
-					equipo de chicos y chicas de secundaria</h4>
-			</header>
-			<header>
-				<h3>Conoce los Proyectos generados en el verano 2024, descarga sus PDF </h3>
-				<p>
-					<a class="uno" href="PDF/1. FAMA-REVIVIENDO ESPACIOS_SS_FAMA.pptx.pdf">Reviviendo
-						Espacios </a><strong> & </strong>
-					<a class="uno" href="PDF/2. FAMA-Racoon Styles_Clean Park.pdf">Clean Park</a>
+			<section id="uno"></section>
+			<section id="dos"></section>
+			<section id="cta">
+				<h3 style="color:white;">¡Una vez mentor, siempre serás mentor!</h3>
+				<p style="font-size: 25px;">Iván Rocha Garza <br> Facilitador JAT N.L.<br>
+					<a href="mailto:ivanrocha@viaeducacion.org"> ivanrocha@viaeducacion.org</a><br><br>
 				</p>
-			</header>
-			<header>
-				<h3>Tú también puedes ser un agente de cambio</h3>
-				<h4>Realmente cualquier persona que este dispuesta a organizarse puede ser un agente de
-					cambio. <a href="PDF/Toolkit de agencia de cambio.pdf">Descarga el Manual.</a></h4>
-			</header>
-			<!--Carrucel-->
-		</section>
-		<section id="main" class="container">
-			<header class="encabezado" style="background-color: #00263a; color: white; border-radius: 10px; ">
-				<h2 style="color: white;">¡Conoce a los equipos !</h2>
-				<p style="color: white;">Jóvenes Atiempo ⚛️ 24 - 25 </p>
-			</header>
-		</section>
-		<div class="slideshow-container">
-			<div class="mySlides fade">
-				<div class="numbertext">1 / 2</div>
-				<img src="images/Equipo Star Trees.jpg" style="width:100%">
-				<div class="text">Star Trees</div>
-			</div>
+			</section>
+		<script>
+  let current = 0;
+  const slides = document.querySelectorAll(".slide");
 
-			<div class="mySlides fade">
-				<div class="numbertext">2 / 2</div>
-				<img src="images/Equipo Solidaridad En Acción (Antes equipo SIMI).jpg" style="width:100%">
-				<div class="text">Solidaridad en acción</div>
-			</div>
-
-			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-			<a class="next" onclick="plusSlides(1)">&#10095;</a>
-		</div>
-		<br>
-		<div style="text-align:center">
-			<span class="dot" onclick="currentSlide(1)"></span>
-			<span class="dot" onclick="currentSlide(2)"></span>
-		</div>
-	</div>
-	</section>
-	</div>
-	<section id="uno"></section>
-	<section id="dos"></section>
-	<section id="cta">
-		<h3 style="color:white;">¡Una vez mentor, siempre serás mentor!</h3>
-		<p style="font-size: 25px;">Iván Rocha Garza <br> Facilitador JAT N.L.<br>
-			<a href="mailto:ivanrocha@viaeducacion.org"> ivanrocha@viaeducacion.org</a><br><br>
-		</p>
-	</section>
-	<script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
-
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
+  function showSlide(index) {
+    slides.forEach((s, i) => s.classList.toggle("active", i === index));
   }
 
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
+  function changeSlide(n) {
+    current = (current + n + slides.length) % slides.length;
+    showSlide(current);
   }
 
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-  }
+  showSlide(current);
 </script>
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.dropotron.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+
+			<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
 	</div>
 </body>
